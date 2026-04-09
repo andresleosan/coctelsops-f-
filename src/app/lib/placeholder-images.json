@@ -2,10 +2,16 @@
 {
   "placeholderImages": [
     {
+      "id": "logo-ops",
+      "description": "Logo Coctels OPS neon style",
+      "imageUrl": "https://picsum.photos/seed/ops-logo/400/400",
+      "imageHint": "neon logo"
+    },
+    {
       "id": "hero-granizado",
       "description": "Refresher tropical granizado with fruit toppings",
       "imageUrl": "https://picsum.photos/seed/granizado1/1200/800",
-      "imageHint": "tropical granizado"
+      "imageHint": "tropical cocktail"
     },
     {
       "id": "product-strawberry",

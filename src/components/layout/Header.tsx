@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { ShoppingCart, Menu, IceCream, BrainCircuit } from 'lucide-react';
+import { ShoppingCart, Menu, GlassWater, BrainCircuit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import {
@@ -27,9 +27,6 @@ export default function Header() {
         <BrainCircuit className="w-4 h-4" />
         Sugeridor AI
       </Link>
-      <Link href="/admin/dashboard" className="text-sm font-medium hover:text-primary transition-colors">
-        Admin
-      </Link>
     </>
   );
 
@@ -43,11 +40,11 @@ export default function Header() {
                 <Menu className="w-5 h-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[240px] sm:w-[300px]">
+            <SheetContent side="left" className="w-[240px] sm:w-[300px] bg-background">
               <SheetHeader>
                 <SheetTitle className="text-left font-headline text-primary flex items-center gap-2">
-                  <IceCream className="w-6 h-6" />
-                  Granizado Go
+                  <GlassWater className="w-6 h-6" />
+                  Coctels OPS
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-8" onClick={() => setIsOpen(false)}>
@@ -57,9 +54,9 @@ export default function Header() {
           </Sheet>
           
           <Link href="/" className="flex items-center gap-2">
-            <IceCream className="w-8 h-8 text-primary" />
+            <GlassWater className="w-8 h-8 text-primary" />
             <span className="font-headline font-bold text-xl tracking-tight text-primary hidden sm:inline-block">
-              Granizado Go
+              Coctels OPS
             </span>
           </Link>
         </div>
@@ -79,7 +76,7 @@ export default function Header() {
               )}
             </Button>
           </Link>
-          <Button className="hidden sm:flex" asChild>
+          <Button className="hidden sm:flex shadow-lg shadow-primary/20" asChild>
             <Link href="/menu">Pedir Ahora</Link>
           </Button>
         </div>

@@ -7,8 +7,8 @@ import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Granizado Go | Refrescancia a Domicilio',
-  description: 'Disfruta de los mejores granizados y cocteles frutales en la puerta de tu casa.',
+  title: 'Coctels OPS | ¡¡ QUE CHIMBA UN OPS !!',
+  description: 'Los mejores granizados y cocteles neón en Medellín. Domicilios en Villa Hermosa.',
 };
 
 export default function RootLayout({
