@@ -1,0 +1,47 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-granizado",
+      "description": "Refresher tropical granizado with fruit toppings",
+      "imageUrl": "https://picsum.photos/seed/granizado1/1200/800",
+      "imageHint": "tropical granizado"
+    },
+    {
+      "id": "product-strawberry",
+      "description": "Strawberry granizado with condensed milk",
+      "imageUrl": "https://picsum.photos/seed/strawberry/600/600",
+      "imageHint": "strawberry slushie"
+    },
+    {
+      "id": "product-mango",
+      "description": "Mango biche granizado with salt and lime",
+      "imageUrl": "https://picsum.photos/seed/mango/600/600",
+      "imageHint": "mango sorbet"
+    },
+    {
+      "id": "product-lulo",
+      "description": "Refreshing Lulo granizado",
+      "imageUrl": "https://picsum.photos/seed/lulo/600/600",
+      "imageHint": "exotic fruit drink"
+    },
+    {
+      "id": "product-coco",
+      "description": "Coconut and pineapple mix granizado",
+      "imageUrl": "https://picsum.photos/seed/coco/600/600",
+      "imageHint": "coconut cocktail"
+    },
+    {
+      "id": "product-maracuya",
+      "description": "Passion fruit granizado with seeds",
+      "imageUrl": "https://picsum.photos/seed/maracuya/600/600",
+      "imageHint": "passion fruit"
+    },
+    {
+      "id": "ai-feature",
+      "description": "Abstract colorful fruit splashing",
+      "imageUrl": "https://picsum.photos/seed/ai-splash/800/600",
+      "imageHint": "abstract fruit"
+    }
+  ]
+}
