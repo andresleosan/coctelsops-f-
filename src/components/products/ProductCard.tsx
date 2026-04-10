@@ -6,7 +6,7 @@ import { Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Product } from '@/app/lib/products';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProductCustomizer from './ProductCustomizer';
 import { Badge } from '@/components/ui/badge';
 
@@ -16,6 +16,12 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [formattedPrice, setFormattedPrice] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Formatear el precio solo en el cliente para evitar errores de hidratación
+    setFormattedPrice(product.price.toLocaleString());
+  }, [product.price]);
 
   // Fallback image to prevent NextJS empty src error
   const imageSrc = product.image || 'https://picsum.photos/seed/placeholder/600/600';
@@ -33,7 +39,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           />
           <div className="absolute top-2 right-2">
             <Badge variant="secondary" className="bg-black/80 backdrop-blur-sm text-primary font-bold border-primary/20">
-              ${product.price.toLocaleString()}
+              {formattedPrice ? `$${formattedPrice}` : '...'}
             </Badge>
           </div>
         </CardHeader>
