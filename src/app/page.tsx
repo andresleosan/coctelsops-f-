@@ -9,9 +9,11 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
   const featuredProducts = PRODUCTS.slice(0, 3);
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-granizado')?.imageUrl || '';
-  const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ops')?.imageUrl || '';
-  const deliveryImage = PlaceHolderImages.find(img => img.id === 'delivery-info')?.imageUrl || '';
+  
+  // Fallbacks for images to prevent empty src errors
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-granizado')?.imageUrl || 'https://picsum.photos/seed/ops-hero/1200/800';
+  const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ops')?.imageUrl || 'https://picsum.photos/seed/ops-logo/600/600';
+  const deliveryImage = PlaceHolderImages.find(img => img.id === 'delivery-info')?.imageUrl || 'https://picsum.photos/seed/ops-delivery/800/600';
 
   return (
     <div className="flex flex-col gap-20 pb-20 bg-background text-white">
@@ -30,7 +32,7 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10 text-center space-y-10 animate-fade-in">
           <div className="flex justify-center">
-            {/* El logo circular fiel a la imagen del usuario */}
+            {/* Logo circular fiel a Coctels OPS */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-primary p-2 shadow-[0_0_60px_rgba(233,30,99,0.7)] bg-black overflow-hidden group">
               <Image 
                 src={logoImage} 
@@ -178,7 +180,6 @@ export default function Home() {
             </Button>
           </div>
           <div className="absolute top-0 right-0 w-full h-full opacity-20 md:opacity-100 md:w-1/2">
-             {/* Imagen de fondo del CTA de IA */}
              <div className="relative w-full h-full">
                 <Image 
                   src="https://picsum.photos/seed/ops-ai-splash/800/600" 

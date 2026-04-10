@@ -5,7 +5,7 @@
       "id": "logo-ops",
       "description": "Logo circular Coctels OPS: texto 'LOS ORIGINALES' en cian neón, 'COCTELS' en magenta neón, 'OPS' en blanco gigante, con cornucopias blancas y granizados en la base sobre fondo negro",
       "imageUrl": "https://picsum.photos/seed/ops-logo-official/600/600",
-      "imageHint": "neon magenta logo"
+      "imageHint": "neon logo"
     },
     {
       "id": "hero-granizado",
@@ -18,6 +18,36 @@
       "description": "Moto de domicilios neón en la noche de Medellín",
       "imageUrl": "https://picsum.photos/seed/ops-delivery/800/600",
       "imageHint": "delivery motorcycle"
+    },
+    {
+      "id": "product-strawberry",
+      "description": "Granizado de fresa con fruta picada y luz neón",
+      "imageUrl": "https://picsum.photos/seed/ops-strawberry/600/600",
+      "imageHint": "strawberry granizado"
+    },
+    {
+      "id": "product-mango",
+      "description": "Granizado de mango biche con sal y limón estilo colombiano",
+      "imageUrl": "https://picsum.photos/seed/ops-mango/600/600",
+      "imageHint": "mango granizado"
+    },
+    {
+      "id": "product-coco",
+      "description": "Granizado de coco y piña tropical",
+      "imageUrl": "https://picsum.photos/seed/ops-coco/600/600",
+      "imageHint": "coconut cocktail"
+    },
+    {
+      "id": "product-maracuya",
+      "description": "Granizado de maracuyá con semillas",
+      "imageUrl": "https://picsum.photos/seed/ops-maracuya/600/600",
+      "imageHint": "passionfruit drink"
+    },
+    {
+      "id": "product-lulo",
+      "description": "Granizado de lulo refrescante",
+      "imageUrl": "https://picsum.photos/seed/ops-lulo/600/600",
+      "imageHint": "lulo juice"
     }
   ]
 }
