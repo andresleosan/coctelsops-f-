@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Star, Truck, ShieldCheck, Zap, MessageSquare, Phone } from 'lucide-react';
+import { ArrowRight, Star, Truck, MessageSquare, MapPin } from 'lucide-react';
 import ProductCard from '@/components/products/ProductCard';
 import { PRODUCTS } from './lib/products';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -29,13 +29,13 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10 text-center space-y-8 animate-fade-in">
           <div className="flex justify-center mb-6">
-            <div className="relative w-40 h-40 rounded-full border-4 border-primary p-2 shadow-[0_0_30px_rgba(255,0,255,0.4)] bg-black">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-primary p-1 shadow-[0_0_50px_rgba(255,0,255,0.6)] bg-black overflow-hidden group">
               <Image 
                 src={logoImage} 
                 alt="Coctels OPS Logo" 
                 fill 
-                className="object-contain rounded-full"
-                data-ai-hint="neon logo"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                data-ai-hint="neon pink circular logo"
               />
             </div>
           </div>
@@ -75,20 +75,24 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-2">
-                <h2 className="text-4xl md:text-5xl font-headline font-bold">DOMICILIOS</h2>
-                <div className="h-1 w-20 bg-primary"></div>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase tracking-tighter">DOMICILIOS</h2>
+                <div className="h-1.5 w-24 bg-primary"></div>
               </div>
               
               <div className="space-y-6">
-                <div className="flex items-center gap-6 p-6 rounded-2xl bg-secondary/50 border border-primary/10 group hover:border-primary/40 transition-all">
-                  <div className="bg-primary/20 p-4 rounded-xl text-primary">
+                <Link 
+                  href="https://wa.me/573245545530" 
+                  target="_blank"
+                  className="flex items-center gap-6 p-6 rounded-2xl bg-secondary/50 border border-primary/10 group hover:border-primary/40 transition-all cursor-pointer"
+                >
+                  <div className="bg-primary/20 p-4 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                     <MessageSquare className="w-8 h-8" />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Pide por WhatsApp</p>
                     <p className="text-2xl font-bold text-white tracking-wider">324 554 5530</p>
                   </div>
-                </div>
+                </Link>
 
                 <div className="flex items-center gap-6 p-6 rounded-2xl bg-secondary/50 border border-primary/10">
                   <div className="bg-primary/20 p-4 rounded-xl text-primary">
@@ -96,7 +100,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Encuéntranos en</p>
-                    <div className="flex gap-4 items-center">
+                    <div className="flex gap-4 items-center flex-wrap">
                       <span className="font-bold text-lg text-[#FF4D00]">DiDi Food</span>
                       <span className="text-muted-foreground">|</span>
                       <span className="font-bold text-lg text-[#FF441F]">Rappi</span>
@@ -109,13 +113,16 @@ export default function Home() {
                 <p className="text-sm italic text-white/90">
                   "Estamos a tu alcance en Villa Hermosa y alrededores. ¡Llegamos rápido y frío!"
                 </p>
-                <p className="text-xs mt-2 text-muted-foreground">Carrera 37 # 66 D 36, Medellín</p>
+                <div className="flex items-start gap-2 mt-4 text-xs text-muted-foreground">
+                  <MapPin className="w-4 h-4 text-primary shrink-0" />
+                  <span>Carrera 37 # 66 D 36, Medellín (Villa Hermosa)</span>
+                </div>
               </div>
             </div>
 
             <div className="relative aspect-square md:aspect-video rounded-3xl overflow-hidden shadow-2xl">
               <Image 
-                src="https://picsum.photos/seed/delivery/800/600" 
+                src="https://picsum.photos/seed/delivery-neon/800/600" 
                 alt="Delivery OPS" 
                 fill 
                 className="object-cover"
@@ -140,7 +147,7 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
-            <h2 className="text-4xl font-headline font-bold mb-2 tracking-tight">LOS MÁS <span className="text-primary italic">TOP</span></h2>
+            <h2 className="text-4xl font-headline font-bold mb-2 tracking-tight uppercase">LOS MÁS <span className="text-primary italic">TOP</span></h2>
             <p className="text-muted-foreground">Las mezclas que no te puedes perder.</p>
           </div>
           <Button variant="outline" className="border-primary text-primary rounded-full hover:bg-primary/10" asChild>
@@ -162,7 +169,7 @@ export default function Home() {
               <Star className="w-4 h-4 fill-white" />
               <span>Sugeridor Inteligente</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-headline font-bold leading-none tracking-tighter">¿CUÁL ES TU <span className="text-black italic">OPS</span> IDEAL?</h2>
+            <h2 className="text-5xl md:text-6xl font-headline font-bold leading-none tracking-tighter uppercase">¿CUÁL ES TU <span className="text-black italic">OPS</span> IDEAL?</h2>
             <p className="text-white/80 text-lg font-light leading-relaxed">
               Nuestra IA diseña la mezcla perfecta basándose en tus antojos. Dulce, ácido o una explosión tropical... tú decides.
             </p>
