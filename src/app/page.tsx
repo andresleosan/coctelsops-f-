@@ -29,13 +29,13 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10 text-center space-y-8 animate-fade-in">
           <div className="flex justify-center mb-6">
-            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-primary p-1 shadow-[0_0_50px_rgba(255,0,255,0.6)] bg-black overflow-hidden group">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-primary p-1 shadow-[0_0_60px_rgba(255,0,255,0.7)] bg-black overflow-hidden group">
               <Image 
                 src={logoImage} 
                 alt="Coctels OPS Logo" 
                 fill 
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                data-ai-hint="neon pink circular logo"
+                data-ai-hint="neon magenta logo"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(255,0,255,0.3)]" asChild>
+            <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-primary text-white hover:bg-primary/90 shadow-[0_0_20px_rgba(255,0,255,0.3)]" asChild>
               <Link href="/menu">
                 VER EL MENÚ <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -131,7 +131,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-black/80 backdrop-blur-md p-4 rounded-xl border border-primary/30 flex items-center justify-between">
-                  <span className="font-bold text-xs uppercase tracking-widest">Estado del Servicio</span>
+                  <span className="font-bold text-xs uppercase tracking-widest text-white">Estado del Servicio</span>
                   <span className="flex items-center gap-2 text-green-400 text-xs font-bold">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
                     ABIERTO AHORA
@@ -147,7 +147,7 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
-            <h2 className="text-4xl font-headline font-bold mb-2 tracking-tight uppercase">LOS MÁS <span className="text-primary italic">TOP</span></h2>
+            <h2 className="text-4xl font-headline font-bold mb-2 tracking-tight uppercase text-white">LOS MÁS <span className="text-primary italic">TOP</span></h2>
             <p className="text-muted-foreground">Las mezclas que no te puedes perder.</p>
           </div>
           <Button variant="outline" className="border-primary text-primary rounded-full hover:bg-primary/10" asChild>

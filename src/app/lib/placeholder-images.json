@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "logo-ops",
-      "description": "Logo circular Coctels OPS con neón rosado y blanco sobre fondo negro",
-      "imageUrl": "https://picsum.photos/seed/ops-official-logo/400/400",
-      "imageHint": "neon pink circular logo"
+      "description": "Logo circular Coctels OPS con texto neón magenta y blanco sobre fondo negro",
+      "imageUrl": "https://picsum.photos/seed/coctels-ops-neon/400/400",
+      "imageHint": "neon magenta logo"
     },
     {
       "id": "hero-granizado",
