@@ -11,13 +11,13 @@
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 3%;
     --popover-foreground: 0 0% 100%;
-    --primary: 327 100% 54%; /* Magenta neón de 'COCTELS' */
+    --primary: 327 100% 54%; /* Magenta neón */
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 70%;
-    --accent: 188 100% 50%; /* Cian neón de 'LOS ORIGINALES' */
+    --accent: 188 100% 50%; /* Cian neón */
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -59,7 +59,6 @@
   animation: fade-in 0.6s ease-out forwards;
 }
 
-/* Optimización para inputs en mobile */
 input, textarea {
   @apply text-sm md:text-base;
 }

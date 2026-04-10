@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-12 md:gap-20 pb-20 bg-background text-white">
-      {/* Hero Section - Máximo impacto visual neón */}
+      {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-8">
         <div className="absolute inset-0 z-0">
           <Image
@@ -72,11 +72,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Domicilios & Info - Optimizado para móviles */}
+      {/* Domicilios Info */}
       <section className="container mx-auto px-4">
         <div className="bg-card/40 border border-primary/20 rounded-[2rem] p-6 md:p-12 backdrop-blur-xl relative overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[80px]"></div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <div className="space-y-1">
@@ -161,34 +159,6 @@ export default function Home() {
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-        </div>
-      </section>
-
-      {/* AI CTA Section */}
-      <section className="container mx-auto px-4">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-purple-900 p-8 md:p-20 text-white">
-          <div className="md:w-1/2 space-y-6 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-[0.2em] backdrop-blur-xl border border-white/30">
-              <Star className="w-3.5 h-3.5 fill-white" />
-              <span>Sugeridor Inteligente</span>
-            </div>
-            <h2 className="text-4xl md:text-7xl font-headline font-bold leading-none tracking-tighter uppercase">¿CUÁL ES TU <span className="text-black italic">OPS</span> IDEAL?</h2>
-            <p className="text-white/80 text-sm md:text-xl font-light leading-relaxed">
-              Nuestra IA diseña la mezcla perfecta basándose en tus antojos. Dulce, ácido o una explosión tropical... tú decides.
-            </p>
-            <Button size="lg" variant="secondary" className="w-full md:w-auto rounded-full bg-white text-primary hover:bg-white/90 px-8 h-14 md:h-18 font-black text-base shadow-2xl uppercase tracking-widest" asChild>
-              <Link href="/ai-suggest">¡SORPRÉNDEME AHORA!</Link>
-            </Button>
-          </div>
-          <div className="absolute top-0 right-0 w-full h-full opacity-20 md:opacity-100 md:w-1/2 -z-0">
-             <Image 
-                src="https://picsum.photos/seed/ops-ai-splash/800/600" 
-                alt="AI Flavor" 
-                fill 
-                className="object-cover"
-                data-ai-hint="neon cocktail"
-              />
-          </div>
         </div>
       </section>
     </div>
