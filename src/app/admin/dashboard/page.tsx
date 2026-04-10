@@ -2,7 +2,7 @@
 
 import { useCollection, useFirestore } from '@/firebase';
 import { collection, query, orderBy, limit, doc, updateDoc } from 'firebase/firestore';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Clock, Users, DollarSign, Package, RefreshCw, Eye, CheckCircle2 } from 'lucide-react';
@@ -41,113 +41,125 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-6 md:py-12 bg-background min-h-screen">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
-          <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary italic neon-text-magenta uppercase tracking-tighter">PANEL OPS</h1>
-          <p className="text-muted-foreground font-medium uppercase tracking-[0.3em] text-[10px] mt-1">Gestión real de pedidos</p>
+    <div className="container mx-auto px-4 py-8 md:py-12 bg-background min-h-screen">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+        <div className="space-y-1">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary italic neon-text-magenta uppercase tracking-tighter">PANEL OPS</h1>
+          <p className="text-muted-foreground font-black uppercase tracking-[0.3em] text-[10px]">Gestión en tiempo real</p>
         </div>
-        <div className="flex gap-2 w-full md:w-auto">
-          <Button size="sm" className="flex-1 md:flex-none bg-primary text-white rounded-full font-bold text-xs h-10 px-6" onClick={() => window.location.reload()}>
-            <RefreshCw className="w-3.5 h-3.5 mr-2" /> ACTUALIZAR
-          </Button>
-        </div>
+        <Button size="lg" className="w-full md:w-auto bg-primary text-white rounded-full font-black text-xs h-14 px-8 shadow-lg shadow-primary/20" onClick={() => window.location.reload()}>
+          <RefreshCw className="w-4 h-4 mr-2" /> ACTUALIZAR DATOS
+        </Button>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
         {[
           { label: 'Ventas', value: `$${stats.totalSales.toLocaleString()}`, icon: DollarSign, color: 'text-green-400', bg: 'bg-green-400/10' },
           { label: 'Pendientes', value: stats.pending.toString(), icon: Clock, color: 'text-primary', bg: 'bg-primary/10' },
           { label: 'Clientes', value: stats.newClients.toString(), icon: Users, color: 'text-accent', bg: 'bg-accent/10' },
           { label: 'Total Hoy', value: stats.totalOrders.toString(), icon: Package, color: 'text-purple-400', bg: 'bg-purple-400/10' }
         ].map((stat, i) => (
-          <Card key={i} className="border-none shadow-xl bg-card/60 backdrop-blur-sm border border-white/5">
-            <CardContent className="p-3 md:p-6 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-2 md:gap-4">
-              <div className={`p-2 md:p-4 rounded-xl md:rounded-2xl ${stat.bg} ${stat.color}`}>
-                <stat.icon className="w-4 h-4 md:w-6 md:h-6" />
+          <Card key={i} className="border-none shadow-2xl bg-card/60 backdrop-blur-xl border border-white/5 rounded-3xl overflow-hidden">
+            <CardContent className="p-5 md:p-8 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4">
+              <div className={`p-4 rounded-2xl ${stat.bg} ${stat.color}`}>
+                <stat.icon className="w-6 h-6" />
               </div>
-              <div>
-                <p className="text-[8px] md:text-[10px] text-muted-foreground font-black uppercase tracking-widest mb-0.5 md:mb-1">{stat.label}</p>
-                <h3 className="text-sm md:text-2xl font-bold text-white tracking-tight">{stat.value}</h3>
+              <div className="space-y-1">
+                <p className="text-[10px] text-muted-foreground font-black uppercase tracking-widest">{stat.label}</p>
+                <h3 className="text-xl md:text-3xl font-bold text-white tracking-tight">{stat.value}</h3>
               </div>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div className="flex items-center justify-between px-2">
-          <h2 className="text-lg font-headline font-bold uppercase tracking-tight text-white/90">PEDIDOS RECIENTES</h2>
-          <Badge variant="outline" className="border-primary text-primary font-bold text-[9px] animate-pulse">VIVO</Badge>
+          <h2 className="text-xl md:text-2xl font-headline font-bold uppercase tracking-tight text-white/90">ÚLTIMOS PEDIDOS</h2>
+          <Badge variant="outline" className="border-primary text-primary font-bold text-[10px] animate-pulse px-3 py-1">EN VIVO</Badge>
         </div>
 
         {loading ? (
-          <div className="text-center py-20 text-muted-foreground italic text-sm">
-            Conectando con la base de datos...
+          <div className="flex flex-col items-center justify-center py-24 space-y-4">
+            <RefreshCw className="w-10 h-10 text-primary animate-spin" />
+            <p className="text-muted-foreground font-medium italic">Sincronizando con la nube...</p>
           </div>
         ) : orders?.length === 0 ? (
-          <div className="text-center py-20 text-muted-foreground italic text-sm">
-            No hay pedidos registrados hoy.
+          <div className="text-center py-24 text-muted-foreground italic text-sm bg-card/20 rounded-3xl border border-dashed border-white/10">
+            No hay pedidos registrados en este momento.
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {orders?.map((order: any) => (
-              <Card key={order.id} className="border-none bg-card/40 border border-white/5 shadow-lg hover:border-primary/20 transition-all">
-                <CardContent className="p-5 space-y-4">
+              <Card key={order.id} className="border-none bg-card/40 border border-white/5 shadow-2xl hover:border-primary/40 transition-all rounded-[2rem] overflow-hidden group">
+                <CardContent className="p-6 md:p-8 space-y-6">
                   <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-bold text-white text-base">{order.customerName}</h4>
-                      <p className="text-xs text-primary font-bold tracking-wider">{order.phone}</p>
+                    <div className="space-y-1">
+                      <h4 className="font-bold text-white text-lg leading-tight">{order.customerName}</h4>
+                      <p className="text-sm text-primary font-bold tracking-wider">{order.phone}</p>
                     </div>
                     <Badge 
-                      className={`text-[9px] px-2 py-0.5 ${
+                      className={`text-[10px] px-3 py-1 font-bold rounded-full ${
                         order.status === 'Pendiente' ? 'bg-amber-500/10 text-amber-500 border-amber-500/20' :
                         order.status === 'Preparando' ? 'bg-blue-500/10 text-blue-500 border-blue-500/20' :
+                        order.status === 'En Camino' ? 'bg-accent/10 text-accent border-accent/20' :
                         'bg-green-500/10 text-green-500 border-green-500/20'
                       }`}
                     >
-                      {order.status}
+                      {order.status.toUpperCase()}
                     </Badge>
                   </div>
 
-                  <div className="space-y-2 py-3 border-y border-white/5">
+                  <div className="space-y-3 py-4 border-y border-white/5">
                     {order.items?.map((it: any, idx: number) => (
-                      <div key={idx} className="flex justify-between text-xs text-white/80">
-                        <span>{it.quantity}x {it.name}</span>
-                        <span className="font-bold">${it.price?.toLocaleString()}</span>
+                      <div key={idx} className="flex justify-between text-sm text-white/80">
+                        <span className="font-light">{it.quantity}x {it.name}</span>
+                        <span className="font-bold text-white">${it.price?.toLocaleString()}</span>
                       </div>
                     ))}
-                    <div className="pt-2 flex justify-between items-end border-t border-white/5">
-                      <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">Total</span>
-                      <span className="text-lg font-bold text-primary">${order.total?.toLocaleString()}</span>
+                    <div className="pt-3 flex justify-between items-end border-t border-white/5">
+                      <span className="text-[10px] text-muted-foreground uppercase font-black tracking-widest">Total OPS</span>
+                      <span className="text-2xl font-black text-primary">${order.total?.toLocaleString()}</span>
                     </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-widest">Dirección de Entrega</p>
-                    <p className="text-xs text-white/90">{order.address}</p>
-                    {order.notes && <p className="text-[10px] italic text-muted-foreground mt-1">Nota: {order.notes}</p>}
+                  <div className="space-y-2">
+                    <p className="text-[10px] text-muted-foreground uppercase font-black tracking-widest">Entrega</p>
+                    <p className="text-sm text-white/90 font-medium leading-relaxed">{order.address}</p>
+                    {order.notes && (
+                      <div className="bg-black/40 p-3 rounded-xl border border-white/5">
+                        <p className="text-[11px] italic text-muted-foreground">Nota: {order.notes}</p>
+                      </div>
+                    )}
                   </div>
 
-                  <div className="flex gap-2 pt-2">
+                  <div className="flex gap-3 pt-2">
                     {order.status === 'Pendiente' && (
                       <Button 
-                        className="flex-1 bg-primary text-white h-9 text-[10px] font-black tracking-widest rounded-full"
+                        className="flex-1 bg-primary text-white h-12 text-xs font-black tracking-widest rounded-full shadow-lg shadow-primary/20"
                         onClick={() => updateStatus(order.id, 'Preparando')}
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 mr-2" /> PREPARAR
+                        <CheckCircle2 className="w-4 h-4 mr-2" /> PREPARAR
                       </Button>
                     )}
                     {order.status === 'Preparando' && (
                       <Button 
-                        className="flex-1 bg-green-500 text-white h-9 text-[10px] font-black tracking-widest rounded-full"
+                        className="flex-1 bg-accent text-black h-12 text-xs font-black tracking-widest rounded-full shadow-lg shadow-accent/20"
                         onClick={() => updateStatus(order.id, 'En Camino')}
                       >
-                        <Package className="w-3.5 h-3.5 mr-2" /> ENVIAR
+                        <Package className="w-4 h-4 mr-2" /> ENVIAR
                       </Button>
                     )}
-                    <Button variant="outline" size="icon" className="h-9 w-9 rounded-full border-white/10">
-                      <Eye className="w-4 h-4" />
+                    {order.status === 'En Camino' && (
+                      <Button 
+                        className="flex-1 bg-green-500 text-white h-12 text-xs font-black tracking-widest rounded-full shadow-lg shadow-green-500/20"
+                        onClick={() => updateStatus(order.id, 'Entregado')}
+                      >
+                        <CheckCircle2 className="w-4 h-4 mr-2" /> ENTREGADO
+                      </Button>
+                    )}
+                    <Button variant="outline" size="icon" className="h-12 w-12 rounded-full border-white/10 hover:bg-white/5">
+                      <Eye className="w-5 h-5" />
                     </Button>
                   </div>
                 </CardContent>
