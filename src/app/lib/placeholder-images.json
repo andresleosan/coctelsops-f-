@@ -3,51 +3,39 @@
   "placeholderImages": [
     {
       "id": "logo-ops",
-      "description": "Logo circular Coctels OPS: texto 'LOS ORIGINALES' en cian neón, 'COCTELS' en magenta neón, 'OPS' en blanco gigante, con cornucopias blancas y granizados en la base sobre fondo negro",
-      "imageUrl": "https://picsum.photos/seed/ops-logo-official/600/600",
+      "description": "Logo circular oficial Coctels OPS: texto 'LOS ORIGINALES' en cian neón, 'COCTELS' en magenta neón, 'OPS' en blanco gigante, con cornucopias blancas en la base sobre fondo negro circular",
+      "imageUrl": "https://picsum.photos/seed/ops-official-branding/600/600",
       "imageHint": "neon logo"
     },
     {
       "id": "hero-granizado",
-      "description": "Granizado de fruta tropical con luces neón en un ambiente nocturno de Medellín",
-      "imageUrl": "https://picsum.photos/seed/granizado-neon-night/1200/800",
+      "description": "Granizado de fresa y mango con luces neón y frutas frescas en un ambiente nocturno de Medellín",
+      "imageUrl": "https://picsum.photos/seed/ops-granizado-night/1200/800",
       "imageHint": "neon cocktail"
     },
     {
       "id": "delivery-info",
-      "description": "Moto de domicilios neón en la noche de Medellín",
-      "imageUrl": "https://picsum.photos/seed/ops-delivery/800/600",
+      "description": "Motocicleta de domicilios neón en la ciudad de noche",
+      "imageUrl": "https://picsum.photos/seed/ops-delivery-service/800/600",
       "imageHint": "delivery motorcycle"
     },
     {
       "id": "product-strawberry",
-      "description": "Granizado de fresa con fruta picada y luz neón",
-      "imageUrl": "https://picsum.photos/seed/ops-strawberry/600/600",
-      "imageHint": "strawberry granizado"
+      "description": "Granizado de fresa con fruta picada y brillo neón",
+      "imageUrl": "https://picsum.photos/seed/ops-product-fresa/600/600",
+      "imageHint": "strawberry drink"
     },
     {
       "id": "product-mango",
-      "description": "Granizado de mango biche con sal y limón estilo colombiano",
-      "imageUrl": "https://picsum.photos/seed/ops-mango/600/600",
+      "description": "Granizado de mango biche colombiano con sal y limón",
+      "imageUrl": "https://picsum.photos/seed/ops-product-mango/600/600",
       "imageHint": "mango granizado"
     },
     {
       "id": "product-coco",
-      "description": "Granizado de coco y piña tropical",
-      "imageUrl": "https://picsum.photos/seed/ops-coco/600/600",
-      "imageHint": "coconut cocktail"
-    },
-    {
-      "id": "product-maracuya",
-      "description": "Granizado de maracuyá con semillas",
-      "imageUrl": "https://picsum.photos/seed/ops-maracuya/600/600",
-      "imageHint": "passionfruit drink"
-    },
-    {
-      "id": "product-lulo",
-      "description": "Granizado de lulo refrescante",
-      "imageUrl": "https://picsum.photos/seed/ops-lulo/600/600",
-      "imageHint": "lulo juice"
+      "description": "Granizado de coco y piña tropical con cerezas",
+      "imageUrl": "https://picsum.photos/seed/ops-product-coco/600/600",
+      "imageHint": "coconut drink"
     }
   ]
 }
