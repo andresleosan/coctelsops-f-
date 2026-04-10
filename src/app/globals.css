@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%; /* Negro puro como el logo */
+    --background: 0 0% 0%; /* Negro puro */
     --foreground: 0 0% 100%;
     --card: 0 0% 3%;
     --card-foreground: 0 0% 100%;
