@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Star, Truck, MessageSquare, MapPin } from 'lucide-react';
+import { ArrowRight, Truck, MessageSquare, MapPin, Star } from 'lucide-react';
 import ProductCard from '@/components/products/ProductCard';
 import { PRODUCTS } from './lib/products';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -11,6 +11,7 @@ export default function Home() {
   const featuredProducts = PRODUCTS.slice(0, 3);
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-granizado')?.imageUrl || '';
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ops')?.imageUrl || '';
+  const deliveryImage = PlaceHolderImages.find(img => img.id === 'delivery-info')?.imageUrl || '';
 
   return (
     <div className="flex flex-col gap-20 pb-20 bg-background text-white">
@@ -29,7 +30,7 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10 text-center space-y-10 animate-fade-in">
           <div className="flex justify-center">
-            {/* El logo circular con el estilo de la imagen */}
+            {/* El logo circular fiel a la imagen del usuario */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-primary p-2 shadow-[0_0_60px_rgba(233,30,99,0.7)] bg-black overflow-hidden group">
               <Image 
                 src={logoImage} 
@@ -69,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Info Domicilios Section */}
+      {/* Domicilios & Info */}
       <section className="container mx-auto px-4">
         <div className="bg-card/50 border border-primary/30 rounded-[3.5rem] p-10 md:p-16 backdrop-blur-sm relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 blur-[100px]"></div>
@@ -122,7 +123,7 @@ export default function Home() {
 
             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-white/5">
               <Image 
-                src="https://picsum.photos/seed/ops-delivery/800/800" 
+                src={deliveryImage} 
                 alt="Delivery OPS" 
                 fill 
                 className="object-cover"
@@ -157,6 +158,36 @@ export default function Home() {
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
+        </div>
+      </section>
+
+      {/* AI CTA Section */}
+      <section className="container mx-auto px-4">
+        <div className="relative rounded-[3.5rem] overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-purple-900 p-10 md:p-24 text-white">
+          <div className="md:w-1/2 space-y-8 relative z-10">
+            <div className="inline-flex items-center gap-2 bg-white/20 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-xl border border-white/30">
+              <Star className="w-4 h-4 fill-white" />
+              <span>Sugeridor Inteligente</span>
+            </div>
+            <h2 className="text-6xl md:text-7xl font-headline font-bold leading-none tracking-tighter uppercase">¿CUÁL ES TU <span className="text-black italic">OPS</span> IDEAL?</h2>
+            <p className="text-white/80 text-xl font-light leading-relaxed">
+              Nuestra IA diseña la mezcla perfecta basándose en tus antojos. Dulce, ácido o una explosión tropical... tú decides.
+            </p>
+            <Button size="lg" variant="secondary" className="rounded-full bg-white text-primary hover:bg-white/90 px-10 py-8 font-bold text-lg shadow-2xl" asChild>
+              <Link href="/ai-suggest">¡SORPRÉNDEME AHORA!</Link>
+            </Button>
+          </div>
+          <div className="absolute top-0 right-0 w-full h-full opacity-20 md:opacity-100 md:w-1/2">
+             {/* Imagen de fondo del CTA de IA */}
+             <div className="relative w-full h-full">
+                <Image 
+                  src="https://picsum.photos/seed/ops-ai-splash/800/600" 
+                  alt="AI Flavor" 
+                  fill 
+                  className="object-cover"
+                />
+             </div>
+          </div>
         </div>
       </section>
     </div>

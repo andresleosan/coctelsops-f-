@@ -14,40 +14,10 @@
       "imageHint": "neon cocktail"
     },
     {
-      "id": "product-strawberry",
-      "description": "Granizado de fresa intenso con toppings neón",
-      "imageUrl": "https://picsum.photos/seed/ops-strawberry/600/600",
-      "imageHint": "strawberry slushie"
-    },
-    {
-      "id": "product-mango",
-      "description": "Mango biche con sal y limón estilo OPS",
-      "imageUrl": "https://picsum.photos/seed/ops-mango/600/600",
-      "imageHint": "mango sorbet"
-    },
-    {
-      "id": "product-coco",
-      "description": "Coco loco refrescante con decoración neón",
-      "imageUrl": "https://picsum.photos/seed/ops-coco/600/600",
-      "imageHint": "coconut cocktail"
-    },
-    {
-      "id": "product-maracuya",
-      "description": "Maracuyá explosivo con semillas",
-      "imageUrl": "https://picsum.photos/seed/ops-passion/600/600",
-      "imageHint": "passion fruit"
-    },
-    {
-      "id": "product-lulo",
-      "description": "Lulo refrescante verde neón",
-      "imageUrl": "https://picsum.photos/seed/ops-lulo/600/600",
-      "imageHint": "exotic drink"
-    },
-    {
-      "id": "ai-feature",
-      "description": "Explosión de colores neón magenta y cian con frutas",
-      "imageUrl": "https://picsum.photos/seed/ops-ai-splash/800/600",
-      "imageHint": "neon fruit splash"
+      "id": "delivery-info",
+      "description": "Moto de domicilios neón en la noche de Medellín",
+      "imageUrl": "https://picsum.photos/seed/ops-delivery/800/600",
+      "imageHint": "delivery motorcycle"
     }
   ]
 }
