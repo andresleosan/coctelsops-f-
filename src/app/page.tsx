@@ -13,52 +13,54 @@ export default function Home() {
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ops')?.imageUrl || '';
 
   return (
-    <div className="flex flex-col gap-20 pb-20 bg-background">
+    <div className="flex flex-col gap-20 pb-20 bg-background text-white">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[95vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage}
-            alt="Delicious tropical granizado"
+            alt="Ambiente nocturno OPS"
             fill
-            className="object-cover opacity-40 grayscale-[0.5]"
+            className="object-cover opacity-30 grayscale-[0.3]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/80 to-background"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center space-y-8 animate-fade-in">
-          <div className="flex justify-center mb-6">
-            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-primary p-1 shadow-[0_0_60px_rgba(255,0,255,0.7)] bg-black overflow-hidden group">
+        <div className="container mx-auto px-4 relative z-10 text-center space-y-10 animate-fade-in">
+          <div className="flex justify-center">
+            {/* El logo circular con el estilo de la imagen */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-primary p-2 shadow-[0_0_60px_rgba(233,30,99,0.7)] bg-black overflow-hidden group">
               <Image 
                 src={logoImage} 
-                alt="Coctels OPS Logo" 
+                alt="COCTELS OPS OFICIAL" 
                 fill 
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                data-ai-hint="neon magenta logo"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                priority
               />
             </div>
           </div>
           
           <div className="space-y-4">
-            <p className="text-primary font-bold tracking-[0.3em] uppercase text-sm animate-pulse">
-              ¡¡ QUE CHIMBA UN OPS !!
+            <p className="text-accent font-bold tracking-[0.4em] uppercase text-sm animate-pulse neon-text-cyan">
+              LOS ORIGINALES
             </p>
-            <h1 className="text-6xl md:text-8xl font-headline font-bold mb-6 leading-tight text-white drop-shadow-[0_0_15px_rgba(255,0,255,0.5)]">
-              Coctels <span className="text-primary italic">OPS</span>
+            <h1 className="text-7xl md:text-9xl font-headline font-bold mb-6 leading-tight tracking-tighter">
+              COCTELS <span className="text-primary italic neon-text-magenta">OPS</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/80 max-w-3xl mx-auto font-light">
-              La experiencia refrescante más potente de Medellín. Granizados y cocteles que activan tus sentidos.
+            <p className="text-xl md:text-2xl mb-8 text-white/70 max-w-2xl mx-auto font-light tracking-wide">
+              ¡¡ QUE CHIMBA UN OPS !! <br />
+              La experiencia refrescante más potente de Medellín.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-primary text-white hover:bg-primary/90 shadow-[0_0_20px_rgba(255,0,255,0.3)]" asChild>
+          <div className="flex flex-wrap justify-center gap-6 pt-4">
+            <Button size="lg" className="rounded-full text-lg px-12 py-8 bg-primary text-white hover:bg-primary/90 neon-shadow-magenta transition-all" asChild>
               <Link href="/menu">
                 VER EL MENÚ <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full text-lg px-10 py-8 border-primary text-primary hover:bg-primary/10" asChild>
+            <Button size="lg" variant="outline" className="rounded-full text-lg px-12 py-8 border-accent text-accent hover:bg-accent/10 transition-all" asChild>
               <Link href="https://wa.me/573245545530" target="_blank">
                 <MessageSquare className="mr-2 w-5 h-5" /> WHATSAPP
               </Link>
@@ -67,73 +69,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Domicilios & Platforms Section */}
+      {/* Info Domicilios Section */}
       <section className="container mx-auto px-4">
-        <div className="bg-card border border-primary/20 rounded-[3rem] p-12 shadow-[0_0_50px_rgba(255,0,255,0.05)] overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -z-10"></div>
+        <div className="bg-card/50 border border-primary/30 rounded-[3.5rem] p-10 md:p-16 backdrop-blur-sm relative overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 blur-[100px]"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase tracking-tighter">DOMICILIOS</h2>
-                <div className="h-1.5 w-24 bg-primary"></div>
+            <div className="space-y-10">
+              <div className="space-y-3">
+                <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter neon-text-magenta uppercase">DOMICILIOS</h2>
+                <div className="h-2 w-32 bg-accent shadow-[0_0_15px_rgba(0,188,212,0.8)]"></div>
               </div>
               
               <div className="space-y-6">
                 <Link 
                   href="https://wa.me/573245545530" 
                   target="_blank"
-                  className="flex items-center gap-6 p-6 rounded-2xl bg-secondary/50 border border-primary/10 group hover:border-primary/40 transition-all cursor-pointer"
+                  className="flex items-center gap-6 p-8 rounded-3xl bg-black/60 border border-primary/20 group hover:border-primary/60 transition-all"
                 >
-                  <div className="bg-primary/20 p-4 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                    <MessageSquare className="w-8 h-8" />
+                  <div className="bg-primary/20 p-5 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_20px_rgba(233,30,99,0.3)]">
+                    <MessageSquare className="w-10 h-10" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Pide por WhatsApp</p>
-                    <p className="text-2xl font-bold text-white tracking-wider">324 554 5530</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-accent mb-1 font-bold">Pide por WhatsApp</p>
+                    <p className="text-3xl font-bold text-white tracking-widest">324 554 5530</p>
                   </div>
                 </Link>
 
-                <div className="flex items-center gap-6 p-6 rounded-2xl bg-secondary/50 border border-primary/10">
-                  <div className="bg-primary/20 p-4 rounded-xl text-primary">
-                    <Truck className="w-8 h-8" />
+                <div className="flex items-center gap-6 p-8 rounded-3xl bg-black/60 border border-accent/20">
+                  <div className="bg-accent/20 p-5 rounded-2xl text-accent shadow-[0_0_20px_rgba(0,188,212,0.3)]">
+                    <Truck className="w-10 h-10" />
                   </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Encuéntranos en</p>
-                    <div className="flex gap-4 items-center flex-wrap">
-                      <span className="font-bold text-lg text-[#FF4D00]">DiDi Food</span>
-                      <span className="text-muted-foreground">|</span>
-                      <span className="font-bold text-lg text-[#FF441F]">Rappi</span>
+                  <div className="space-y-2">
+                    <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1 font-bold">También en</p>
+                    <div className="flex gap-6 items-center flex-wrap">
+                      <span className="font-black text-xl text-[#FF4D00]">DiDi Food</span>
+                      <span className="text-white/20">|</span>
+                      <span className="font-black text-xl text-[#FF441F]">Rappi</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 border-l-4 border-primary bg-primary/5 rounded-r-2xl">
-                <p className="text-sm italic text-white/90">
-                  "Estamos a tu alcance en Villa Hermosa y alrededores. ¡Llegamos rápido y frío!"
-                </p>
-                <div className="flex items-start gap-2 mt-4 text-xs text-muted-foreground">
-                  <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  <span>Carrera 37 # 66 D 36, Medellín (Villa Hermosa)</span>
+              <div className="flex items-start gap-4 p-6 border-l-4 border-accent bg-accent/5 rounded-r-3xl">
+                <MapPin className="w-6 h-6 text-accent shrink-0 mt-1" />
+                <div className="space-y-1">
+                  <p className="text-white font-medium">Carrera 37 # 66 D 36, Villa Hermosa</p>
+                  <p className="text-sm text-muted-foreground italic">"Llegamos frío y potente a todo el barrio."</p>
                 </div>
               </div>
             </div>
 
-            <div className="relative aspect-square md:aspect-video rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-white/5">
               <Image 
-                src="https://picsum.photos/seed/delivery-neon/800/600" 
+                src="https://picsum.photos/seed/ops-delivery/800/800" 
                 alt="Delivery OPS" 
                 fill 
                 className="object-cover"
-                data-ai-hint="delivery motorcycle"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-black/80 backdrop-blur-md p-4 rounded-xl border border-primary/30 flex items-center justify-between">
-                  <span className="font-bold text-xs uppercase tracking-widest text-white">Estado del Servicio</span>
-                  <span className="flex items-center gap-2 text-green-400 text-xs font-bold">
-                    <span className="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="bg-black/90 backdrop-blur-xl p-5 rounded-2xl border border-primary/40 flex items-center justify-between">
+                  <span className="font-bold text-sm uppercase tracking-widest text-white">SERVICIO ACTIVO</span>
+                  <span className="flex items-center gap-3 text-green-400 text-sm font-black">
+                    <span className="w-3 h-3 bg-green-400 rounded-full animate-ping"></span>
                     ABIERTO AHORA
                   </span>
                 </div>
@@ -145,47 +144,19 @@ export default function Home() {
 
       {/* Featured Products */}
       <section className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-          <div>
-            <h2 className="text-4xl font-headline font-bold mb-2 tracking-tight uppercase text-white">LOS MÁS <span className="text-primary italic">TOP</span></h2>
-            <p className="text-muted-foreground">Las mezclas que no te puedes perder.</p>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+          <div className="space-y-2">
+            <h2 className="text-5xl font-headline font-bold uppercase tracking-tight">LOS MÁS <span className="text-primary italic neon-text-magenta">TOP</span></h2>
+            <p className="text-muted-foreground tracking-widest uppercase text-xs">Mezclas exclusivas de la casa</p>
           </div>
-          <Button variant="outline" className="border-primary text-primary rounded-full hover:bg-primary/10" asChild>
-            <Link href="/menu">VER TODO EL CATÁLOGO <ArrowRight className="ml-2 w-4 h-4" /></Link>
+          <Button variant="outline" className="border-primary text-primary rounded-full hover:bg-primary/10 px-8" asChild>
+            <Link href="/menu">CATÁLOGO COMPLETO <ArrowRight className="ml-2 w-4 h-4" /></Link>
           </Button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-        </div>
-      </section>
-
-      {/* AI Suggestion CTA */}
-      <section className="container mx-auto px-4">
-        <div className="relative rounded-[3rem] overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-purple-900 p-8 md:p-20 text-white flex flex-col md:flex-row items-center gap-16">
-          <div className="md:w-1/2 space-y-8 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-white/20 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-xl border border-white/30">
-              <Star className="w-4 h-4 fill-white" />
-              <span>Sugeridor Inteligente</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-headline font-bold leading-none tracking-tighter uppercase">¿CUÁL ES TU <span className="text-black italic">OPS</span> IDEAL?</h2>
-            <p className="text-white/80 text-lg font-light leading-relaxed">
-              Nuestra IA diseña la mezcla perfecta basándose en tus antojos. Dulce, ácido o una explosión tropical... tú decides.
-            </p>
-            <Button size="lg" variant="secondary" className="rounded-full bg-white text-primary hover:bg-white/90 px-10 py-8 font-bold text-lg shadow-2xl" asChild>
-              <Link href="/ai-suggest">¡SORPRÉNDEME AHORA!</Link>
-            </Button>
-          </div>
-          <div className="md:w-1/2 relative h-[400px] w-full group">
-            <div className="absolute inset-0 bg-primary blur-[80px] opacity-30 animate-pulse"></div>
-            <Image
-              src={PlaceHolderImages.find(img => img.id === 'ai-feature')?.imageUrl || ''}
-              alt="AI Concept"
-              fill
-              className="object-cover rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
         </div>
       </section>
     </div>

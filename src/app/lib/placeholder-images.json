@@ -3,51 +3,51 @@
   "placeholderImages": [
     {
       "id": "logo-ops",
-      "description": "Logo circular Coctels OPS con texto neón magenta y blanco sobre fondo negro",
-      "imageUrl": "https://picsum.photos/seed/coctels-ops-neon/400/400",
+      "description": "Logo circular Coctels OPS: texto 'LOS ORIGINALES' en cian neón, 'COCTELS' en magenta neón, 'OPS' en blanco gigante, con cornucopias blancas y granizados en la base sobre fondo negro",
+      "imageUrl": "https://picsum.photos/seed/ops-logo-official/600/600",
       "imageHint": "neon magenta logo"
     },
     {
       "id": "hero-granizado",
-      "description": "Refresher tropical granizado with fruit toppings",
-      "imageUrl": "https://picsum.photos/seed/granizado1/1200/800",
-      "imageHint": "tropical cocktail"
+      "description": "Granizado de fruta tropical con luces neón en un ambiente nocturno de Medellín",
+      "imageUrl": "https://picsum.photos/seed/granizado-neon-night/1200/800",
+      "imageHint": "neon cocktail"
     },
     {
       "id": "product-strawberry",
-      "description": "Strawberry granizado with condensed milk",
-      "imageUrl": "https://picsum.photos/seed/strawberry/600/600",
+      "description": "Granizado de fresa intenso con toppings neón",
+      "imageUrl": "https://picsum.photos/seed/ops-strawberry/600/600",
       "imageHint": "strawberry slushie"
     },
     {
       "id": "product-mango",
-      "description": "Mango biche granizado with salt and lime",
-      "imageUrl": "https://picsum.photos/seed/mango/600/600",
+      "description": "Mango biche con sal y limón estilo OPS",
+      "imageUrl": "https://picsum.photos/seed/ops-mango/600/600",
       "imageHint": "mango sorbet"
     },
     {
-      "id": "product-lulo",
-      "description": "Refreshing Lulo granizado",
-      "imageUrl": "https://picsum.photos/seed/lulo/600/600",
-      "imageHint": "exotic fruit drink"
-    },
-    {
       "id": "product-coco",
-      "description": "Coconut and pineapple mix granizado",
-      "imageUrl": "https://picsum.photos/seed/coco/600/600",
+      "description": "Coco loco refrescante con decoración neón",
+      "imageUrl": "https://picsum.photos/seed/ops-coco/600/600",
       "imageHint": "coconut cocktail"
     },
     {
       "id": "product-maracuya",
-      "description": "Passion fruit granizado with seeds",
-      "imageUrl": "https://picsum.photos/seed/maracuya/600/600",
+      "description": "Maracuyá explosivo con semillas",
+      "imageUrl": "https://picsum.photos/seed/ops-passion/600/600",
       "imageHint": "passion fruit"
     },
     {
+      "id": "product-lulo",
+      "description": "Lulo refrescante verde neón",
+      "imageUrl": "https://picsum.photos/seed/ops-lulo/600/600",
+      "imageHint": "exotic drink"
+    },
+    {
       "id": "ai-feature",
-      "description": "Abstract colorful fruit splashing",
-      "imageUrl": "https://picsum.photos/seed/ai-splash/800/600",
-      "imageHint": "abstract fruit"
+      "description": "Explosión de colores neón magenta y cian con frutas",
+      "imageUrl": "https://picsum.photos/seed/ops-ai-splash/800/600",
+      "imageHint": "neon fruit splash"
     }
   ]
 }

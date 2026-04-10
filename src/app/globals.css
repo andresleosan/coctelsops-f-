@@ -5,31 +5,26 @@
 
 @layer base {
   :root {
-    --background: 300 80% 2%;
-    --foreground: 300 20% 98%;
-    --card: 300 60% 4%;
-    --card-foreground: 300 20% 98%;
-    --popover: 300 60% 4%;
-    --popover-foreground: 300 20% 98%;
-    --primary: 300 100% 50%;
-    --primary-foreground: 300 20% 98%;
-    --secondary: 300 50% 12%;
-    --secondary-foreground: 300 20% 98%;
-    --muted: 300 30% 15%;
-    --muted-foreground: 300 20% 65%;
-    --accent: 300 100% 60%;
-    --accent-foreground: 300 20% 98%;
+    --background: 0 0% 0%; /* Negro puro como el logo */
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 327 100% 54%; /* Magenta neón de 'COCTELS' */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 188 100% 50%; /* Cian neón de 'LOS ORIGINALES' */
+    --accent-foreground: 0 0% 0%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 300 30% 20%;
-    --input: 300 30% 20%;
-    --ring: 300 100% 50%;
-    --radius: 1rem;
-    --chart-1: 300 100% 50%;
-    --chart-2: 280 100% 60%;
-    --chart-3: 320 100% 50%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 327 100% 54%;
+    --radius: 1.5rem;
   }
 }
 
@@ -41,4 +36,16 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+.neon-shadow-magenta {
+  box-shadow: 0 0 20px rgba(233, 30, 99, 0.5), 0 0 40px rgba(233, 30, 99, 0.2);
+}
+
+.neon-text-magenta {
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.8), 0 0 20px rgba(233, 30, 99, 0.4);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.8), 0 0 20px rgba(0, 188, 212, 0.4);
 }
