@@ -30,14 +30,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/80 to-black"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center space-y-6 animate-fade-in">
-          <div className="flex justify-center">
-            <div className="relative w-44 h-44 md:w-72 md:h-72 rounded-full border-4 border-primary p-1 shadow-[0_0_40px_rgba(233,30,99,0.5)] bg-black overflow-hidden group transition-all">
+        <div className="container mx-auto px-4 relative z-10 text-center space-y-6 animate-fade-in flex flex-col items-center justify-center min-h-full">
+          <div className="flex justify-center w-full">
+            <div className="relative w-44 h-44 md:w-72 md:h-72 rounded-full border-4 border-primary p-1 shadow-[0_0_40px_rgba(233,30,99,0.5)] bg-black overflow-hidden group transition-all flex items-center justify-center">
               <Image 
                 src={logoImage} 
                 alt="COCTELS OPS OFICIAL" 
                 fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 priority
                 data-ai-hint="neon logo"
               />
