@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: 'Coctels OPS | ¡¡ QUE CHIMBA UN OPS !!',
   description: 'Los mejores granizados y cocteles neón en Medellín. Domicilios en Villa Hermosa.',
   icons: {
-    icon: '/favicon.ico',
-    apple: '/Contels_OPS.Perfil.png',
+    icon: '/favicon.ico?v=1',
+    apple: '/Contels_OPS.Perfil.png?v=1',
   },
 };
 
