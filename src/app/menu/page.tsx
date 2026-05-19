@@ -35,6 +35,17 @@ export default function MenuPage() {
         </p>
       </div>
 
+      {/* Menú Interactivo Canva */}
+      <div className="mb-16 rounded-[2rem] overflow-hidden">
+        <iframe 
+          src="https://cartacoctelsops.my.canva.site/?fbclid=PAY2xjawIBM0BleHRuA2FlbQIxMAABpo07SqMFni5aqLVnII7WNFsKVhxq3eOu2xY8bP-DEYY-UbmWzsnyb0pfyw_aem_9w328MMocFp3VHv0IGkJaA"
+          title="Menú Coctels OPS"
+          className="w-full h-screen md:h-[600px] border-0 rounded-[2rem]"
+          allowFullScreen
+          loading="lazy"
+        />
+      </div>
+
       <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between">
         <div className="flex flex-wrap gap-2 justify-center">
           {categories.map((cat) => (
