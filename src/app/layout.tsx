@@ -9,6 +9,9 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Coctels OPS | ¡¡ QUE CHIMBA UN OPS !!',
   description: 'Los mejores granizados y cocteles neón en Medellín. Domicilios en Villa Hermosa.',
+  icons: {
+    icon: '/Contels_OPS.Perfil.png',
+  },
 };
 
 export default function RootLayout({
