@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Truck, MessageSquare, MapPin, Star } from 'lucide-react';
 import ProductCard from '@/components/products/ProductCard';
+import CocktailCarousel from '@/components/products/CocktailCarousel';
 import { PRODUCTS } from './lib/products';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -121,24 +122,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/5 order-first md:order-last">
-              <Image 
-                src={deliveryImage} 
-                alt="Delivery OPS" 
-                fill 
-                className="object-cover"
-                data-ai-hint="delivery motorcycle"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-black/90 backdrop-blur-xl p-3 rounded-xl border border-primary/40 flex items-center justify-between">
-                  <span className="font-bold text-[9px] uppercase tracking-widest text-white">ESTADO OPS</span>
-                  <span className="flex items-center gap-2 text-green-400 text-[9px] font-black uppercase">
-                    <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-ping"></span>
-                    ABIERTO AHORA
-                  </span>
-                </div>
-              </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-white/5 order-first md:order-last">
+              <CocktailCarousel />
             </div>
           </div>
         </div>
