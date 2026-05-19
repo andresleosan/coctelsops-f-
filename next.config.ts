@@ -41,6 +41,19 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+          {
+            key: 'Content-Type',
+            value: 'image/x-icon',
+          },
+        ],
+      },
+      {
+        source: '/Contels_OPS.Perfil.png',
+        headers: [
+          {
+            key: 'Cache-Control',
             value: 'public, max-age=86400, must-revalidate',
           },
         ],

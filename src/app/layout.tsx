@@ -10,8 +10,10 @@ export const metadata: Metadata = {
   title: 'Coctels OPS | ¡¡ QUE CHIMBA UN OPS !!',
   description: 'Los mejores granizados y cocteles neón en Medellín. Domicilios en Villa Hermosa.',
   icons: {
-    icon: '/favicon.ico?v=1',
-    apple: '/Contels_OPS.Perfil.png?v=1',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/Contels_OPS.Perfil.png',
   },
 };
 
@@ -23,8 +25,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/Contels_OPS.Perfil.png?v=2" type="image/png" />
-        <link rel="apple-touch-icon" href="/Contels_OPS.Perfil.png?v=2" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
